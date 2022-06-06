@@ -17,7 +17,7 @@ function handleGuess(guess) {
     // If the result is 1 (win), increase wins state
     // Increase total state 
     // ***
-
+    
     // Store the guess so we can apply special background
     guessed = guess;
     // Clear the timeout, in case user is clicking again before
@@ -61,7 +61,15 @@ function displayHidingSpots() {
     // add the 'guessed' class if the guessed state
     // matches for tree, shed, or boulder
     // ***
-
+    if (guessed === 'tree') {
+        treeButton.classList.add('guessed');
+    }
+    if (guessed === 'shed') {
+        shedButton.classList.add('guessed');
+    }
+    if (guessed === 'boulder') {
+        boulderButton.classList.add('guessed');
+    }
 
     // Clear the face and guessed classes after two seconds
     // store the timeout so we can clear if user makes
