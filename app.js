@@ -17,7 +17,14 @@ function handleGuess(guess) {
     // If the result is 1 (win), increase wins state
     // Increase total state 
     // ***
-    
+    spot = getRandomItem(spots);
+    const result = score(guess, spot);
+
+    total++;
+    if (result === 1) {
+        wins++;
+    }
+
     // Store the guess so we can apply special background
     guessed = guess;
     // Clear the timeout, in case user is clicking again before
